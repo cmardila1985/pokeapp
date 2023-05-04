@@ -9,12 +9,27 @@ import SwiftUI
 
 @main
 struct pockeAppApp: App {
-    let persistenceController = PersistenceController.shared
-
+    @StateObject var manager: DataManager = DataManager()
+    @State var log = UserDefaults.standard.bool(forKey: Constants.DefaultsKeys.logged)
+    
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(named: "DownButtonBack")
+        UINavigationBar.appearance().tintColor = .white
+        UITableView.appearance().separatorStyle = .none
+        UITableViewCell.appearance().backgroundColor = UIColor(Color("BackGround"))
+        UITableView.appearance().backgroundColor = UIColor(Color("BackGround"))
+        UITableView.appearance().contentInset.top = -35
+        UIScrollView.appearance().keyboardDismissMode = .onDrag
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+             
+            Group{
+                NavigationMenu(manager: manager)
+            }.onOpenURL { url in
+                
+            }
         }
     }
 }

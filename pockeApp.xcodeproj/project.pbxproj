@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E8B174E52594FCF4F31F86E /* Pods_pockeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E6CDE54A67F1381606912C /* Pods_pockeApp.framework */; };
+		938E1E7C854C0716C30C7D74 /* Pods_pockeApp_pockeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690A1381AAA3C1B7F80071D1 /* Pods_pockeApp_pockeAppUITests.framework */; };
+		CD071B772A02DBCC0005089C /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071B762A02DBCC0005089C /* PokemonDetailView.swift */; };
+		CD071B792A03DBCE0005089C /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071B782A03DBCE0005089C /* ListContentView.swift */; };
+		CD071B7B2A03E43B0005089C /* ResponsePokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071B7A2A03E43B0005089C /* ResponsePokemonDetail.swift */; };
+		CD3D86EE2A02BEAA00B6C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD3D86F02A02BEAA00B6C8A2 /* Localizable.strings */; };
 		CDB2525429FEFB960019FB30 /* pockeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2525329FEFB960019FB30 /* pockeAppApp.swift */; };
 		CDB2525629FEFB960019FB30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2525529FEFB960019FB30 /* ContentView.swift */; };
 		CDB2525829FEFB980019FB30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB2525729FEFB980019FB30 /* Assets.xcassets */; };
@@ -16,6 +22,21 @@
 		CDB2526A29FEFB980019FB30 /* pockeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2526929FEFB980019FB30 /* pockeAppTests.swift */; };
 		CDB2527429FEFB980019FB30 /* pockeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2527329FEFB980019FB30 /* pockeAppUITests.swift */; };
 		CDB2527629FEFB980019FB30 /* pockeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2527529FEFB980019FB30 /* pockeAppUITestsLaunchTests.swift */; };
+		CDB2528329FEFCC50019FB30 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2528229FEFCC50019FB30 /* Constants.swift */; };
+		CDB2528629FEFD450019FB30 /* Forms+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2528529FEFD450019FB30 /* Forms+Identifiable.swift */; };
+		CDB2528929FF004F0019FB30 /* ResponsePokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2528829FF004F0019FB30 /* ResponsePokemonList.swift */; };
+		CDB2528C29FF00D90019FB30 /* ServiceObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2528B29FF00D90019FB30 /* ServiceObservableObject.swift */; };
+		CDB2528E29FF016A0019FB30 /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2528D29FF016A0019FB30 /* ServiceViewModel.swift */; };
+		CDB2529129FF04B30019FB30 /* ListServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2529029FF04B30019FB30 /* ListServicesView.swift */; };
+		CDB2529429FF052A0019FB30 /* ListPagination in Frameworks */ = {isa = PBXBuildFile; productRef = CDB2529329FF052A0019FB30 /* ListPagination */; };
+		CDB2529729FF05A90019FB30 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2529629FF05A90019FB30 /* DataManager.swift */; };
+		CDB2529929FF05D10019FB30 /* ServiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2529829FF05D10019FB30 /* ServiceItem.swift */; };
+		CDB2529C2A00A9B30019FB30 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDB2529A2A00A9B30019FB30 /* Model.xcdatamodeld */; };
+		CDB252A02A00AC930019FB30 /* ServiceListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2529F2A00AC930019FB30 /* ServiceListRowView.swift */; };
+		CDB252A22A00AD150019FB30 /* String+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB252A12A00AD150019FB30 /* String+Identifiable.swift */; };
+		CDB252A62A00AE8A0019FB30 /* NavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB252A52A00AE8A0019FB30 /* NavigationMenu.swift */; };
+		CDB252A82A00C9AD0019FB30 /* TabPanelServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB252A72A00C9AD0019FB30 /* TabPanelServicesView.swift */; };
+		D5099348D11B45D896430A8F /* Pods_pockeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFAEB17A7C1CB89923D442A /* Pods_pockeAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +57,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		058E45BAD0EF30F8AAEE8868 /* Pods-pockeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pockeAppTests.release.xcconfig"; path = "Target Support Files/Pods-pockeAppTests/Pods-pockeAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		557D8FB8D68835019C1AD816 /* Pods-pockeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pockeApp.release.xcconfig"; path = "Target Support Files/Pods-pockeApp/Pods-pockeApp.release.xcconfig"; sourceTree = "<group>"; };
+		67AFE299BC26ED6370745B9D /* Pods-pockeApp-pockeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pockeApp-pockeAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-pockeApp-pockeAppUITests/Pods-pockeApp-pockeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		686A2971CEE6513BCCE0BAE6 /* Pods-pockeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pockeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-pockeAppTests/Pods-pockeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		690A1381AAA3C1B7F80071D1 /* Pods_pockeApp_pockeAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pockeApp_pockeAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CFAEB17A7C1CB89923D442A /* Pods_pockeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pockeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E6CDE54A67F1381606912C /* Pods_pockeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pockeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5A02220848C42B4FA7F817 /* Pods-pockeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pockeApp.debug.xcconfig"; path = "Target Support Files/Pods-pockeApp/Pods-pockeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C6B4BB8FB43AD64488DE03ED /* Pods-pockeApp-pockeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pockeApp-pockeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-pockeApp-pockeAppUITests/Pods-pockeApp-pockeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CD071B762A02DBCC0005089C /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
+		CD071B782A03DBCE0005089C /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
+		CD071B7A2A03E43B0005089C /* ResponsePokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePokemonDetail.swift; sourceTree = "<group>"; };
+		CD3D86EF2A02BEAA00B6C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD3D86F12A02BEAC00B6C8A2 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CDB2525029FEFB960019FB30 /* pockeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pockeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB2525329FEFB960019FB30 /* pockeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pockeAppApp.swift; sourceTree = "<group>"; };
 		CDB2525529FEFB960019FB30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +83,19 @@
 		CDB2526F29FEFB980019FB30 /* pockeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pockeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB2527329FEFB980019FB30 /* pockeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pockeAppUITests.swift; sourceTree = "<group>"; };
 		CDB2527529FEFB980019FB30 /* pockeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pockeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CDB2528229FEFCC50019FB30 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CDB2528529FEFD450019FB30 /* Forms+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Forms+Identifiable.swift"; sourceTree = "<group>"; };
+		CDB2528829FF004F0019FB30 /* ResponsePokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePokemonList.swift; sourceTree = "<group>"; };
+		CDB2528B29FF00D90019FB30 /* ServiceObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceObservableObject.swift; sourceTree = "<group>"; };
+		CDB2528D29FF016A0019FB30 /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
+		CDB2529029FF04B30019FB30 /* ListServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesView.swift; sourceTree = "<group>"; };
+		CDB2529629FF05A90019FB30 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CDB2529829FF05D10019FB30 /* ServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceItem.swift; sourceTree = "<group>"; };
+		CDB2529B2A00A9B30019FB30 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CDB2529F2A00AC930019FB30 /* ServiceListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListRowView.swift; sourceTree = "<group>"; };
+		CDB252A12A00AD150019FB30 /* String+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Identifiable.swift"; sourceTree = "<group>"; };
+		CDB252A52A00AE8A0019FB30 /* NavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenu.swift; sourceTree = "<group>"; };
+		CDB252A72A00C9AD0019FB30 /* TabPanelServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPanelServicesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB2529429FF052A0019FB30 /* ListPagination in Frameworks */,
+				6E8B174E52594FCF4F31F86E /* Pods_pockeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5099348D11B45D896430A8F /* Pods_pockeAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,19 +120,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938E1E7C854C0716C30C7D74 /* Pods_pockeApp_pockeAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B113D534519AB27CE573BC5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3E6CDE54A67F1381606912C /* Pods_pockeApp.framework */,
+				690A1381AAA3C1B7F80071D1 /* Pods_pockeApp_pockeAppUITests.framework */,
+				7CFAEB17A7C1CB89923D442A /* Pods_pockeAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B79DEF8598FE14205E906BC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE5A02220848C42B4FA7F817 /* Pods-pockeApp.debug.xcconfig */,
+				557D8FB8D68835019C1AD816 /* Pods-pockeApp.release.xcconfig */,
+				67AFE299BC26ED6370745B9D /* Pods-pockeApp-pockeAppUITests.debug.xcconfig */,
+				C6B4BB8FB43AD64488DE03ED /* Pods-pockeApp-pockeAppUITests.release.xcconfig */,
+				686A2971CEE6513BCCE0BAE6 /* Pods-pockeAppTests.debug.xcconfig */,
+				058E45BAD0EF30F8AAEE8868 /* Pods-pockeAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CDB2524729FEFB960019FB30 = {
 			isa = PBXGroup;
 			children = (
+				CD3D86F02A02BEAA00B6C8A2 /* Localizable.strings */,
+				CDB2529A2A00A9B30019FB30 /* Model.xcdatamodeld */,
 				CDB2525229FEFB960019FB30 /* pockeApp */,
 				CDB2526829FEFB980019FB30 /* pockeAppTests */,
 				CDB2527229FEFB980019FB30 /* pockeAppUITests */,
 				CDB2525129FEFB960019FB30 /* Products */,
+				B79DEF8598FE14205E906BC5 /* Pods */,
+				B113D534519AB27CE573BC5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,12 +177,18 @@
 		CDB2525229FEFB960019FB30 /* pockeApp */ = {
 			isa = PBXGroup;
 			children = (
+				CDB2529529FF05980019FB30 /* Persistent */,
+				CDB2528F29FF049F0019FB30 /* Views */,
+				CDB2528A29FF00C10019FB30 /* ViewModels */,
+				CDB2528729FF003E0019FB30 /* Models */,
+				CDB2528429FEFD100019FB30 /* Extensions */,
 				CDB2525329FEFB960019FB30 /* pockeAppApp.swift */,
 				CDB2525529FEFB960019FB30 /* ContentView.swift */,
 				CDB2525729FEFB980019FB30 /* Assets.xcassets */,
 				CDB2525C29FEFB980019FB30 /* Persistence.swift */,
 				CDB2525E29FEFB980019FB30 /* pockeApp.xcdatamodeld */,
 				CDB2525929FEFB980019FB30 /* Preview Content */,
+				CDB2528229FEFCC50019FB30 /* Constants.swift */,
 			);
 			path = pockeApp;
 			sourceTree = "<group>";
@@ -133,6 +218,55 @@
 			path = pockeAppUITests;
 			sourceTree = "<group>";
 		};
+		CDB2528429FEFD100019FB30 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CDB2528529FEFD450019FB30 /* Forms+Identifiable.swift */,
+				CDB252A12A00AD150019FB30 /* String+Identifiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CDB2528729FF003E0019FB30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CDB2528829FF004F0019FB30 /* ResponsePokemonList.swift */,
+				CDB2529829FF05D10019FB30 /* ServiceItem.swift */,
+				CD071B7A2A03E43B0005089C /* ResponsePokemonDetail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CDB2528A29FF00C10019FB30 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CDB2528B29FF00D90019FB30 /* ServiceObservableObject.swift */,
+				CDB2528D29FF016A0019FB30 /* ServiceViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CDB2528F29FF049F0019FB30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDB2529029FF04B30019FB30 /* ListServicesView.swift */,
+				CDB2529F2A00AC930019FB30 /* ServiceListRowView.swift */,
+				CDB252A52A00AE8A0019FB30 /* NavigationMenu.swift */,
+				CDB252A72A00C9AD0019FB30 /* TabPanelServicesView.swift */,
+				CD071B762A02DBCC0005089C /* PokemonDetailView.swift */,
+				CD071B782A03DBCE0005089C /* ListContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDB2529529FF05980019FB30 /* Persistent */ = {
+			isa = PBXGroup;
+			children = (
+				CDB2529629FF05A90019FB30 /* DataManager.swift */,
+			);
+			path = Persistent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,15 +274,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDB2527929FEFB980019FB30 /* Build configuration list for PBXNativeTarget "pockeApp" */;
 			buildPhases = (
+				B6C9A17073512390B33C7D37 /* [CP] Check Pods Manifest.lock */,
 				CDB2524C29FEFB960019FB30 /* Sources */,
 				CDB2524D29FEFB960019FB30 /* Frameworks */,
 				CDB2524E29FEFB960019FB30 /* Resources */,
+				914905AFCE0A62E3BA037E5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = pockeApp;
+			packageProductDependencies = (
+				CDB2529329FF052A0019FB30 /* ListPagination */,
+			);
 			productName = pockeApp;
 			productReference = CDB2525029FEFB960019FB30 /* pockeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDB2527C29FEFB980019FB30 /* Build configuration list for PBXNativeTarget "pockeAppTests" */;
 			buildPhases = (
+				A04CA9D5F3D5F2502B619EF2 /* [CP] Check Pods Manifest.lock */,
 				CDB2526129FEFB980019FB30 /* Sources */,
 				CDB2526229FEFB980019FB30 /* Frameworks */,
 				CDB2526329FEFB980019FB30 /* Resources */,
@@ -175,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDB2527F29FEFB980019FB30 /* Build configuration list for PBXNativeTarget "pockeAppUITests" */;
 			buildPhases = (
+				CFF358EBB56C849563B30DF4 /* [CP] Check Pods Manifest.lock */,
 				CDB2526B29FEFB980019FB30 /* Sources */,
 				CDB2526C29FEFB980019FB30 /* Frameworks */,
 				CDB2526D29FEFB980019FB30 /* Resources */,
+				DC0012B8EDCBDF06FB9E9740 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,8 +361,12 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = CDB2524729FEFB960019FB30;
+			packageReferences = (
+				CDB2529229FF052A0019FB30 /* XCRemoteSwiftPackageReference "ListPagination" */,
+			);
 			productRefGroup = CDB2525129FEFB960019FB30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB2525B29FEFB980019FB30 /* Preview Assets.xcassets in Resources */,
+				CD3D86EE2A02BEAA00B6C8A2 /* Localizable.strings in Resources */,
 				CDB2525829FEFB980019FB30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,15 +405,134 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		914905AFCE0A62E3BA037E5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pockeApp/Pods-pockeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pockeApp/Pods-pockeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pockeApp/Pods-pockeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A04CA9D5F3D5F2502B619EF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pockeAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6C9A17073512390B33C7D37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pockeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFF358EBB56C849563B30DF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pockeApp-pockeAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC0012B8EDCBDF06FB9E9740 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pockeApp-pockeAppUITests/Pods-pockeApp-pockeAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pockeApp-pockeAppUITests/Pods-pockeApp-pockeAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pockeApp-pockeAppUITests/Pods-pockeApp-pockeAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CDB2524C29FEFB960019FB30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB2529929FF05D10019FB30 /* ServiceItem.swift in Sources */,
+				CDB2528929FF004F0019FB30 /* ResponsePokemonList.swift in Sources */,
+				CDB2528329FEFCC50019FB30 /* Constants.swift in Sources */,
 				CDB2526029FEFB980019FB30 /* pockeApp.xcdatamodeld in Sources */,
+				CDB252A62A00AE8A0019FB30 /* NavigationMenu.swift in Sources */,
+				CD071B772A02DBCC0005089C /* PokemonDetailView.swift in Sources */,
 				CDB2525D29FEFB980019FB30 /* Persistence.swift in Sources */,
 				CDB2525629FEFB960019FB30 /* ContentView.swift in Sources */,
+				CDB252A22A00AD150019FB30 /* String+Identifiable.swift in Sources */,
+				CDB2528C29FF00D90019FB30 /* ServiceObservableObject.swift in Sources */,
+				CDB2529129FF04B30019FB30 /* ListServicesView.swift in Sources */,
 				CDB2525429FEFB960019FB30 /* pockeAppApp.swift in Sources */,
+				CD071B792A03DBCE0005089C /* ListContentView.swift in Sources */,
+				CDB252A02A00AC930019FB30 /* ServiceListRowView.swift in Sources */,
+				CDB252A82A00C9AD0019FB30 /* TabPanelServicesView.swift in Sources */,
+				CDB2529729FF05A90019FB30 /* DataManager.swift in Sources */,
+				CDB2528E29FF016A0019FB30 /* ServiceViewModel.swift in Sources */,
+				CD071B7B2A03E43B0005089C /* ResponsePokemonDetail.swift in Sources */,
+				CDB2529C2A00A9B30019FB30 /* Model.xcdatamodeld in Sources */,
+				CDB2528629FEFD450019FB30 /* Forms+Identifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +567,18 @@
 			targetProxy = CDB2527029FEFB980019FB30 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD3D86F02A02BEAA00B6C8A2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD3D86EF2A02BEAA00B6C8A2 /* en */,
+				CD3D86F12A02BEAC00B6C8A2 /* es-419 */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CDB2527729FEFB980019FB30 /* Debug */ = {
@@ -419,6 +697,7 @@
 		};
 		CDB2527A29FEFB980019FB30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5A02220848C42B4FA7F817 /* Pods-pockeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -438,7 +717,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joonik.pockeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = holafly.pockeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -448,6 +727,7 @@
 		};
 		CDB2527B29FEFB980019FB30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 557D8FB8D68835019C1AD816 /* Pods-pockeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,7 +747,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joonik.pockeApp;
+				PRODUCT_BUNDLE_IDENTIFIER = holafly.pockeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -477,6 +757,7 @@
 		};
 		CDB2527D29FEFB980019FB30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686A2971CEE6513BCCE0BAE6 /* Pods-pockeAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +778,7 @@
 		};
 		CDB2527E29FEFB980019FB30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 058E45BAD0EF30F8AAEE8868 /* Pods-pockeAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +799,7 @@
 		};
 		CDB2528029FEFB980019FB30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67AFE299BC26ED6370745B9D /* Pods-pockeApp-pockeAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +818,7 @@
 		};
 		CDB2528129FEFB980019FB30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B4BB8FB43AD64488DE03ED /* Pods-pockeApp-pockeAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -592,6 +876,25 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		CDB2529229FF052A0019FB30 /* XCRemoteSwiftPackageReference "ListPagination" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/crelies/ListPagination.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDB2529329FF052A0019FB30 /* ListPagination */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB2529229FF052A0019FB30 /* XCRemoteSwiftPackageReference "ListPagination" */;
+			productName = ListPagination;
+		};
+/* End XCSwiftPackageProductDependency section */
+
 /* Begin XCVersionGroup section */
 		CDB2525E29FEFB980019FB30 /* pockeApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
@@ -600,6 +903,16 @@
 			);
 			currentVersion = CDB2525F29FEFB980019FB30 /* pockeApp.xcdatamodel */;
 			path = pockeApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		CDB2529A2A00A9B30019FB30 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CDB2529B2A00A9B30019FB30 /* Model.xcdatamodel */,
+			);
+			currentVersion = CDB2529B2A00A9B30019FB30 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

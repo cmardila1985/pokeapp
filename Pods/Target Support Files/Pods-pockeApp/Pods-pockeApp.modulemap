@@ -1,0 +1,6 @@
+framework module Pods_pockeApp {
+  umbrella header "Pods-pockeApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

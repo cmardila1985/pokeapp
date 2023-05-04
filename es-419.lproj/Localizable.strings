@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  pockeApp
+
+  Created by cristian manuel ardila troches on 3/05/23.
+  
+*/
+"login_text13" = "Bienvenido a";
+"login_text14" = "HolaFly Pokémon";
+"list_services_text1" = "Pokémones";
+"list_services_text2" = "Buscar pokémon";

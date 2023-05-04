@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "listpagination",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/crelies/ListPagination.git",
+      "state" : {
+        "revision" : "af667b368a10512da79605b61698d53c11d24cbf",
+        "version" : "0.1.1"
+      }
+    }
+  ],
+  "version" : 2
+}
