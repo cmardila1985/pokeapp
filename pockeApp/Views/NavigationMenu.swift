@@ -20,6 +20,8 @@ struct NavigationMenu: View {
     @State var name = UserDefaults.standard.string(forKey: Constants.DefaultsKeys.userName) ?? ""
     @Environment(\.colorScheme) var colorScheme
     
+    
+    
     var body: some View {
         ZStack{
             TabPanelServicesView(showToolbar: $showToolbar, show: $show,currentView: $currentView2, manager: _manager )

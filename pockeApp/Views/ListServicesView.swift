@@ -1,6 +1,5 @@
 //
 //  ListServicesView.swift
-//  AppEcoscootingOffline
 //
 //  Created by cristian manuel ardila troches on 9/01/23.
 //
@@ -20,9 +19,11 @@ struct ListServicesView: View {
     @EnvironmentObject var manager: DataManager
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var todoItems: FetchedResults<Services>
-    
+    @ObservedObject var monitor = NetworkMonitor()
+    @State private var showAlertSheet = false
     
     @ObservedObject var servicesModel = ServiceObservableObject()
+    @ObservedObject var serviceObs = ServiceObservableObject()
     @Binding var showToolbar : Bool
    // @ObservedObject  var servicesModel =  ServiceViewModel()
   //  @ObservedObject var validateModel = ValidateModelViewModel()
@@ -58,20 +59,62 @@ struct ListServicesView: View {
         UITableView.appearance().contentInset.top = -35
          
         tokenCurrent = ""//defaults.value(forKey: Constants.DefaultsKeys.userToken) as! String
-        let newTask = Services(context: viewContext)
-        newTask.reference = "DIOS ES BUENO"
-        try? viewContext.save()
         servicesModel.fetchMembers()
     }
     
-    
+ 
     /// Add a new item
     private func addItem() {
-        presentTextInputAlert(title: "Add Task", message: "Enter your task name") { name in
-            let newTask = Services(context: viewContext)
-            newTask.reference = name
+        /*presentTextInputAlert(title: "Agrega un nuevo Pokémon", message: "Ingresa su nombre") { name in
+            let newPokemon = Services(context: viewContext)
+            newPokemon.name = name
             try? viewContext.save()
+        }*/
+        //let newPokemon = Services(context: viewContext)
+        /*print("REMOVER LOS POKEMONES")
+        print(todoItems.count)
+        let newPokemon = Services(context: viewContext)
+        newPokemon.name = "bulbasaur"
+        newPokemon.url = "bulbasaur"
+        print("VALIDANDO EL POKE ON OK")
+        print(todoItems)*/
+        //context.del(data)
+       // print( todoItems.elementsEqual(Sequence))
+       
+       /* let fetchRequest = Services.fetchRequest()
+
+            // Perform Fetch Request
+           viewContext.perform {
+                do {
+                    // Execute Fetch Request
+                    let result = try fetchRequest.execute()
+                    
+                    fetchRequest.predicate = NSPredicate(format: "name = %@", newPokemon)
+                    fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: false)]
+                    // Update Books Label
+                    print("\(result.count) Books")
+                    print("\(fetchRequest) pokemon")
+                    var fetchedSongs = try viewContext.fetch(fetchRequest)
+                    print(fetchedSongs)
+
+                } catch {
+                    print("Unable to Execute Fetch Request, \(error)")
+                }
+            }*/
+        
+        if  servicesModel.listServicesCurrent.count > 0 {
+            
+            for pokemon in servicesModel.listServicesCurrent {
+                
+                 
+                let newPokemon = Services(context: viewContext)
+                newPokemon.name = pokemon.name
+                newPokemon.url = pokemon.url
+                try? viewContext.save()
+            }
+            
         }
+
     }
     
     var body: some View {
@@ -80,9 +123,9 @@ struct ListServicesView: View {
               
                 ZStack{
                     VStack{
-                        Button(action: addItem, label: {
+                       /*Button(action: addItem, label: {
                            Image(systemName: "plus")
-                       })
+                       })*/
                         /*HStack{
                             Spacer()
                             Text("list_services_text1").font(.custom("Poppins-Bold", size: 25.0)).foregroundColor(!servicesModel.isGettingData&&(servicesModel.status != 401)||isReady ? .white:Color("GaleryTitleColor")).frame(maxHeight: .infinity, alignment: .bottom).padding(.bottom,15)
@@ -122,26 +165,74 @@ struct ListServicesView: View {
                             
                             if servicesModel.status == 200{
                                 
-                                /*List {
-                                    ForEach(todoItems) { item in
-                                        Label(item.reference ?? "No Name", systemImage: "circle.fill")
-                                            .frame(maxWidth: .infinity, alignment: .leading).contentShape(Rectangle())
-                                            .onTapGesture {
-                                               // item.isCompleted = !item.isCompleted
-                                                try? viewContext.save()
+                                if !monitor.isConnected {
+                                    
+                                    if(todoItems.count > 0){
+                                        Text("Sin conexión a internet (Off line)")
+                                        List {
+                                            ForEach(todoItems) { item in
+                                                
+                                                ZStack{
+                                                    RoundedRectangle(cornerRadius: 7, style: .continuous)
+                                                        .fill(Color.white)
+                                                    HStack(spacing : 15){
+                                                        //Constants.IMAGE_URL
+                                                        if item.name != nil {
+                                                            AsyncImage(url: URL(string: "\(Constants.IMAGE_URL)\(getIdPokemon(inputString: item.url!)).png")).scaledToFill().frame(width: 100).clipped()
+                                                        }else{
+                                                            Image("CSLogo01").resizable().frame(width: 60, alignment: .leading).padding(5)
+                                                        }
+                                                        VStack(spacing : 0){
+                                                            HStack{
+                                                                Text("\(item.name ?? "No Name")")
+                                                                    .font(.custom("Poppins-Bold", size: 16.0))
+                                                                    .lineLimit(show ? 10:2)
+                                                                    .foregroundColor(Color("TextDarkest"))
+                                                                    .frame(maxWidth: .infinity,alignment : .bottomLeading)
+                                                                    .padding(.vertical, show ? 10: 20)
+                                                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                                                                
+                                                                
+                                                                
+                                                            }
+                                                            
+                                                            
+                                                        }.padding(.vertical, 5).zIndex(1)
+                                                        
+                                                        
+                                                    }.background(Color("ModelListColor")).zIndex(1).onTapGesture {
+                                                       // selectedPokemon = service
+                                                        itemClicked = true
+                                                    }.onLongPressGesture{
+                                                        
+                                                    }
+                                                    
+                                                }.frame(maxWidth: .infinity, minHeight: 70)// .listRowBackground(Color("BackGround"))
+                                                    .padding(.bottom, -8).cornerRadius(5)
+                                                /*Label(item.name ?? "No Name", systemImage: "circle.fill")
+                                                    .frame(maxWidth: .infinity, alignment: .leading).contentShape(Rectangle())
+                                                    .onTapGesture {
+                                                        
+                                                    }*/
                                             }
+                                        }
                                     }
-                                }*/
+                                }else{
+                                    Text("Con conexión a internet (On line)")
+                                    listOfServices(
+                                                   search: $search,
+                                                   itemClicked: $itemClicked2,
+                                                   selectedPokemon: $selectedPokemon
+                                                  ).onAppear(){
+                                        // services = servicesModel.services!
+                                         isReady = true
+                                         
+                                     }
+                                    
+                                }
                                 
-                                listOfServices(
-                                               search: $search,
-                                               itemClicked: $itemClicked2,
-                                               selectedPokemon: $selectedPokemon
-                                              ).onAppear(){
-                                    // services = servicesModel.services!
-                                     isReady = true
-                                     
-                                 }
+                                
+                                
                              
                             }else{
                                 Text("").onAppear(){
@@ -157,6 +248,7 @@ struct ListServicesView: View {
                         }else if servicesModel.isGettingData{
                           
                             if  servicesModel.listServicesCurrent.count > 0 {
+                                
                                 
                                 listOfServices(
                                                search: $search,
@@ -225,6 +317,7 @@ struct ListServicesView: View {
                 }.onAppear(){
                     showToolbar = true
                     servicesModel.fetchMembers()
+                    addItem()
                 }
                 
                
@@ -246,6 +339,7 @@ struct listOfServices: View {
     @State var collapse = false
     @State var show2 = false
     @ObservedObject var serviceObs = ServiceObservableObject()
+    @Environment(\.managedObjectContext) private var viewContext
   //  @ObservedObject  var servicesModel =  ServiceViewModel()
     var body: some View {
         
@@ -255,6 +349,8 @@ struct listOfServices: View {
                }
             )
         }
+        
+
         //NavigationView {
             List {
                 

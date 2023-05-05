@@ -12,6 +12,7 @@ struct pockeAppApp: App {
     @StateObject var manager: DataManager = DataManager()
     @State var log = UserDefaults.standard.bool(forKey: Constants.DefaultsKeys.logged)
     
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor(named: "DownButtonBack")
         UINavigationBar.appearance().tintColor = .white

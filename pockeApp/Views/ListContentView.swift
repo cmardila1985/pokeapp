@@ -20,7 +20,7 @@ struct ListContentView: View {
             VStack{
             List {
                 ForEach(todoItems) { item in
-                    Label(item.reference ?? "No Name", systemImage: "circle.fill")
+                    Label(item.name ?? "No Name", systemImage: "circle.fill")
                         .frame(maxWidth: .infinity, alignment: .leading).contentShape(Rectangle())
                         .onTapGesture {
                            // item.isCompleted = !item.isCompleted
@@ -43,7 +43,7 @@ struct ListContentView: View {
     private func addItem() {
         presentTextInputAlert(title: "Add Task", message: "Enter your task name") { name in
             let newTask = Services(context: viewContext)
-            newTask.reference = name
+            newTask.name = name
             try? viewContext.save()
         }
     }

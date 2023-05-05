@@ -12,6 +12,7 @@
 		CD071B772A02DBCC0005089C /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071B762A02DBCC0005089C /* PokemonDetailView.swift */; };
 		CD071B792A03DBCE0005089C /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071B782A03DBCE0005089C /* ListContentView.swift */; };
 		CD071B7B2A03E43B0005089C /* ResponsePokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071B7A2A03E43B0005089C /* ResponsePokemonDetail.swift */; };
+		CD071B7D2A04A0C60005089C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071B7C2A04A0C60005089C /* NetworkMonitor.swift */; };
 		CD3D86EE2A02BEAA00B6C8A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD3D86F02A02BEAA00B6C8A2 /* Localizable.strings */; };
 		CDB2525429FEFB960019FB30 /* pockeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2525329FEFB960019FB30 /* pockeAppApp.swift */; };
 		CDB2525629FEFB960019FB30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2525529FEFB960019FB30 /* ContentView.swift */; };
@@ -69,6 +70,7 @@
 		CD071B762A02DBCC0005089C /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		CD071B782A03DBCE0005089C /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
 		CD071B7A2A03E43B0005089C /* ResponsePokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePokemonDetail.swift; sourceTree = "<group>"; };
+		CD071B7C2A04A0C60005089C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		CD3D86EF2A02BEAA00B6C8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD3D86F12A02BEAC00B6C8A2 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CDB2525029FEFB960019FB30 /* pockeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pockeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +244,7 @@
 			children = (
 				CDB2528B29FF00D90019FB30 /* ServiceObservableObject.swift */,
 				CDB2528D29FF016A0019FB30 /* ServiceViewModel.swift */,
+				CD071B7C2A04A0C60005089C /* NetworkMonitor.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				CDB2529129FF04B30019FB30 /* ListServicesView.swift in Sources */,
 				CDB2525429FEFB960019FB30 /* pockeAppApp.swift in Sources */,
 				CD071B792A03DBCE0005089C /* ListContentView.swift in Sources */,
+				CD071B7D2A04A0C60005089C /* NetworkMonitor.swift in Sources */,
 				CDB252A02A00AC930019FB30 /* ServiceListRowView.swift in Sources */,
 				CDB252A82A00C9AD0019FB30 /* TabPanelServicesView.swift in Sources */,
 				CDB2529729FF05A90019FB30 /* DataManager.swift in Sources */,
@@ -767,7 +771,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joonik.pockeAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = holafly.pockeAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -788,7 +792,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joonik.pockeAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = holafly.pockeAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -807,7 +811,7 @@
 				DEVELOPMENT_TEAM = 72RCN4947L;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joonik.pockeAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = holafly.pockeAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -826,7 +830,7 @@
 				DEVELOPMENT_TEAM = 72RCN4947L;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joonik.pockeAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = holafly.pockeAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
